@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibição das Viagens Cadastradas</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body background="/static/fundo.png">
+
+
+<nav class="botoes">
+
+
+        <a href="/">
+            <button>Página Inicial</button>
+        </a>
+
+        <a href="/cadastrohotel">
+            <button>Cadastro de Hotel</button>
+        </a>
+
+         <a href="/viagem/cadastro"><button>Cadastrar Viagem</button></a>
+
+    </nav>
+
+
+
+<header>
+    <h1 class="titulolo">Viagens Cadastradas</h1>
+</header>
+
+<section>
+{% for variavel in viagem %}
+    <fieldset>
+    <h2>{{ variavel[1] }}</h2>
+    <p>Destino: {{ variavel[1] }}</p>
+    <p>Transporte: {{ variavel[2] }}</p>
+    <p>Dias: {{ variavel[3] }} dias</p>
+    <p>Orçamento: R$ {{ variavel[4] }}</p>
+    <a href="/viagem/editar/{{ variavel[0] }}"><button>Editar Viagem</button></a>
+    <a href="/viagem/excluir/{{ variavel[0] }}"><button>Excluir Viagem</button></a>
+    </fieldset>
+{% endfor %}
+</section>
+
+<footer>
+    <p>© 2026 Viagens. Todos os direitos reservados.<p>
+    <p>Projeto desenvolvido para atividade escolar do Fel, pelos alunos: JUlio e P. Liberato
+</footer>
+
+</body>
+</html>

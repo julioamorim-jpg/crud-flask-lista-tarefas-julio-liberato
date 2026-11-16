@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exibir Hotéis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body background="/static/fundo.png">
+
+    <h1>Exibir Hotéis Cadastrados</h1>
+
+<nav class="botoes">
+
+
+        <a href="/">
+            <button>Página Inicial</button>
+        </a>
+
+        <a href="/cadastrohotel">
+            <button>Cadastro de Hotel</button>
+        </a>
+
+         <a href="/viagem/cadastrar"><button>Cadastrar Viagem</button></a>
+
+    </nav>
+
+    <br>
+
+    <h2>Hotéis Cadastrados</h2>
+
+    <p>
+        Nesta página serão exibidos os Hotéis cadastrados no sistema.
+    </p>
+    {% for hotel in lista %}
+        <fieldset>
+        <h2>{{ hotel[1] }}</h2>
+        <p>Nome: {{ hotel[1] }} </p>
+        <p>Cidade: {{ hotel[2] }} </p>
+        <p>Estrelas: {{ hotel[3] }} </p>
+        <p>Diária: {{ hotel[4] }} </p>
+        <a href="/excluirhotel/{{ hotel[0]  }}"><button>Excluir</button></a>
+        <a href="/editarhotel/{{ hotel[0]  }}"><button>Editar</button></a>
+        </fieldset>
+
+    {% endfor %}
+
+<footer>
+    <p>© 2026 Viagens. Todos os direitos reservados.<p>
+    <p>Projeto desenvolvido para atividade escolar do Fel, pelos alunos: JUlio e P. Liberato
+</footer>
+
+</body>
+
+</html>

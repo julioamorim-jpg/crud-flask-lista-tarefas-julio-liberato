@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Hotel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body background="/static/fundo.png">
+
+    <h1>Editar Hotel</h1>
+
+<nav class="botoes">
+
+
+        <a href="/">
+            <button>Página Inicial</button>
+        </a>
+
+        <a href="/cadastrohotel">
+            <button>Cadastro de Hotel</button>
+        </a>
+
+         <a href="/viagem/cadastrar"><button>Cadastrar Viagem</button></a>
+
+    </nav>
+
+    <br><br>
+
+    <form action = "/alterarhotel/{{ hotel[0] }}" method="post">
+        <fieldset>
+            <legend>Editar Hotel</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" name = "nome" value = "{{ hotel [1] }}">
+
+            <br><br>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" value = "{{ hotel [2] }}">
+
+            <br><br>
+
+            <label for="estrela">Estrela:</label>
+            <select id="estrelas" name="estrelas" value = "{{ hotel [3] }}">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+                </select>
+
+            <br><br>
+
+            <label for="diaria">Diaria:</label>
+            <input type="text" name="diaria" value = "{{ hotel [4] }}">
+
+            <br><br>
+
+
+
+            <button type="submit">Editar Hotel</button>
+        </fieldset>
+    </form>
+
+
+
+<footer>
+    <p>© 2026 Viagens. Todos os direitos reservados.<p>
+    <p>Projeto desenvolvido para atividade escolar do Fel, pelos alunos: JUlio e P. Liberato
+</footer>
+</body>
+
+</html>
