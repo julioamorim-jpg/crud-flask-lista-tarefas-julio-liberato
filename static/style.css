@@ -1,0 +1,79 @@
+
+.titulo{
+text-align: center;
+    background: #1950aa;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;}
+
+
+.titulolo{
+    text-align: center;
+    background: #1950aa;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;}
+
+
+.title{
+    text-align: center;
+    background: #1950aa;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;}
+
+section {
+    margin: 50px;
+    padding: 40px;
+    background-color: #c4d9ff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.botoes{
+      background-color: #1c4fa1;
+    text-align: center;
+    color: #f4f4ef;
+    padding: 15px;
+}
+
+
+
+
+/* 1. lib ajudou com isso */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1;
+}
+
+
+footer {
+    background-color: #1c4fa1;
+    text-align: center;
+    color: #f4f4ef;
+    padding: 15px;
+}
+
+
+.catapimbas{
+    text-align: center;
+    margin: 0;
+    padding-top: 70px;
+    height: 100%;
+}
